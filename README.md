@@ -41,3 +41,5 @@ _(adicione aqui prints das telas do app rodando no celular ou emulador)_
 ---
 
 Desenvolvido para a disciplina de Desenvolvimento Mobile 📲
+
+Desenvolvido por João Paulo Francisco de Oliveira RM557410 e Marcelo Antonio Scoleso Junior RM557481
