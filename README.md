@@ -30,7 +30,13 @@ OpenWeatherMap
 
 ## 📸 Prints da Aplicação
 
-_(adicione aqui prints das telas do app rodando no celular ou emulador)_
+### 🏠 Tela Inicial
+
+![Home Screen](./assets/images/home.png)
+
+### ☀️ Tela de Clima
+
+![Weather Screen](./assets/images/weather.png)
 
 ## 🚀 Como rodar o projeto
 

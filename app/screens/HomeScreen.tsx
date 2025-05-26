@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen({ navigation }: any) {
   const greeting = () => {
@@ -11,13 +11,50 @@ export default function HomeScreen({ navigation }: any) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{greeting()}</Text>
-      <Button title="Ver clima agora" onPress={() => navigation.navigate('Weather')} />
+      <Text style={styles.greeting}>{greeting()}</Text>
+
+      <Pressable style={styles.button} onPress={() => navigation.navigate('Weather')}>
+        <Text style={styles.buttonText}>🌩️ Ver clima agora</Text>
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  text: { fontSize: 24, marginBottom: 20 }
+  container: {
+    flex: 1,
+    backgroundColor: '#0f0f0f',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  greeting: {
+    fontSize: 32,
+    color: '#00f2ff',
+    fontWeight: 'bold',
+    marginBottom: 40,
+    textShadowColor: '#00f2ff88',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 8,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: '#1f1f1f',
+    borderWidth: 2,
+    borderColor: '#00f2ff',
+    paddingVertical: 15,
+    paddingHorizontal: 25,
+    borderRadius: 10,
+    shadowColor: '#00f2ff',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+  buttonText: {
+    color: '#00f2ff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  },
 });

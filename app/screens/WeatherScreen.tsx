@@ -38,8 +38,8 @@ export default function WeatherScreen() {
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" color="#0000ff" />
-        <Text>Carregando clima...</Text>
+        <ActivityIndicator size="large" color="#00f2ff" />
+        <Text style={styles.loadingText}>Carregando clima...</Text>
       </View>
     );
   }
@@ -71,15 +71,30 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#0f0f0f',
   },
   center: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#0f0f0f',
   },
   error: {
-    color: 'red',
+    color: '#ff4c4c',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textShadowColor: '#ff4c4c88',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 5,
+    textAlign: 'center',
+  },
+  loadingText: {
+    color: '#00f2ff',
     fontSize: 16,
+    marginTop: 10,
+    fontWeight: '600',
+    textShadowColor: '#00f2ff55',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 5,
   },
 });
